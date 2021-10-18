@@ -1,0 +1,7 @@
+<configuration>
+    <property>
+        <name>dfs.client.use.datanode.hostname</name>
+        <value>true</value>
+        <description>only cofig in clients</description>
+    </property>
+</configuration>
