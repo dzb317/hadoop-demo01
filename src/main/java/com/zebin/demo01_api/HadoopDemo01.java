@@ -1,4 +1,4 @@
-package com.zebin.demo01;
+package com.zebin.demo01_api;
 
 import java.io.FileInputStream;
 import java.net.URI;
@@ -33,12 +33,12 @@ import org.apache.hadoop.io.IOUtils;
  * （2）将以下映射添加到文件中。
  *    ip(公网IP) hadoop-node
  * */
-public class HadoopConnect {
+public class HadoopDemo01 {
     public static void main(String[] args) throws Exception{
         Configuration conf =new Configuration();
         FileSystem fs = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),conf,"root");
         FileInputStream input = new FileInputStream("src/main/resources/Sun.txt");
-        FSDataOutputStream output = fs.create(new Path("/bbb.txt"));
+        FSDataOutputStream output = fs.create(new Path("/sun.txt"));
         IOUtils.copyBytes(input, output, conf);
         IOUtils.closeStream(input);
         IOUtils.closeStream(output);
