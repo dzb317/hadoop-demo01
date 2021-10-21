@@ -12,7 +12,7 @@ public class HadoopDemo04 {
         Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),configuration,"root");
         fs.rename(new Path("/test"),new Path("/hadoop"));
-        fs.rename(new Path("/sun.txt"),new Path("/hadoop/"));
+        fs.rename(new Path("/hadoop"),new Path("/input/Sun.txt"));
         fs.close();
     }
 }

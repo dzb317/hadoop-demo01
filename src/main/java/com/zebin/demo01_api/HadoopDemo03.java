@@ -10,7 +10,7 @@ public class HadoopDemo03 {
     public static void main(String[] args) throws Exception{
         Configuration conf = new Configuration();
         FileSystem fileSystem = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),conf,"root");
-        fileSystem.mkdirs(new Path("/test"));
+        fileSystem.mkdirs(new Path("/input"));
         fileSystem.close();
     }
 }

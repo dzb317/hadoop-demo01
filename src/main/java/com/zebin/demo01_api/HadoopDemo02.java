@@ -9,7 +9,7 @@ public class HadoopDemo02 {
     public static void main(String[] args) throws Exception{
         Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),configuration,"root");
-        fs.delete(new Path("/bbb.txt"),true);
+        fs.delete(new Path("/hadoop"),true);
         fs.close();
     }
 }
