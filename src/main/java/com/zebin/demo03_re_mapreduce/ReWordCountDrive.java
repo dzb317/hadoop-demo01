@@ -5,6 +5,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.CombineFileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
@@ -22,6 +23,12 @@ public class ReWordCountDrive {
             job.setMapOutputValueClass(IntWritable.class);
             job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(IntWritable.class);
+            /*
+            设置传输文件的格式和虚拟块大小
+            默认TextFileInputFormat
+            job.setInputFormatClass(CombineFileInputFormat.class);
+            CombineFileInputFormat.setMaxInputSplitSize(job,1024*1024*128);
+            */
             FileInputFormat.setInputPaths(job,new Path(args[0]));
             FileOutputFormat.setOutputPath(job,new Path(args[1]));
             boolean result = job.waitForCompletion(true);
