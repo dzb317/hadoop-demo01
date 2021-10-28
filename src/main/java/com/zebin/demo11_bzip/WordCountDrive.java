@@ -28,8 +28,8 @@ public class WordCountDrive {
             job.setMapOutputValueClass(IntWritable.class);
             job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(IntWritable.class);
-            FileInputFormat.setInputPaths(job,new Path("src/main/resources/Sun.txt"));
-            FileOutputFormat.setOutputPath(job,new Path("src/main/resources/aaa"));
+            FileInputFormat.setInputPaths(job,new Path("src/main/file/Sun.txt"));
+            FileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
             //reduce端开启压缩，设置压缩方式
             FileOutputFormat.setCompressOutput(job,true);
             FileOutputFormat.setOutputCompressorClass(job,BZip2Codec.class);

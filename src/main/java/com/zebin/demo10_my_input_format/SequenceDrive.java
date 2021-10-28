@@ -22,8 +22,8 @@ public class SequenceDrive {
             job.setOutputValueClass(BytesWritable.class);
             job.setOutputFormatClass(SequenceFileOutputFormat.class);
             job.setInputFormatClass(MyInputFormat.class);
-            MyInputFormat.addInputPath(job,new Path("src/main/resources/JionFile"));
-            SequenceFileOutputFormat.setOutputPath(job,new Path("src/main/resources/aaa"));
+            MyInputFormat.addInputPath(job,new Path("src/main/file/JionFile"));
+            SequenceFileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
             job.setNumReduceTasks(0);
             boolean b = job.waitForCompletion(true);
             System.exit(b?0:1);

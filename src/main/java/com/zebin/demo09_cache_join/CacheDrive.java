@@ -21,9 +21,9 @@ public class CacheDrive {
             job.setOutputValueClass(NullWritable.class);
             job.setMapperClass(CacheMapper.class);
             job.setNumReduceTasks(0);
-            job.addCacheFile(new URI("file:///Users/dingzebin/Desktop/Code/Idea-code/hadoop/src/main/resources/b.txt"));
-            FileInputFormat.setInputPaths(job,new Path("src/main/resources/JionFile/a.txt"));
-            FileOutputFormat.setOutputPath(job,new Path("src/main/resources/aaa"));
+            job.addCacheFile(new URI("file:///Users/dingzebin/Desktop/Code/Idea-code/hadoop/src/main/file/b.txt"));
+            FileInputFormat.setInputPaths(job,new Path("src/main/file/JionFile/a.txt"));
+            FileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
             boolean b = job.waitForCompletion(true);
             System.exit(b?0:1);
         } catch (IOException e) {

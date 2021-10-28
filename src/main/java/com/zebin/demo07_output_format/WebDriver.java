@@ -29,9 +29,9 @@ public class WebDriver {
             job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(NullWritable.class);
             job.setOutputFormatClass(WebOutPutFormat.class);
-            FileInputFormat.setInputPaths(job,new Path("src/main/resources/web.txt"));
+            FileInputFormat.setInputPaths(job,new Path("src/main/file/web.txt"));
             job.setOutputFormatClass(WebOutPutFormat.class);
-            FileOutputFormat.setOutputPath(job,new Path("src/main/resources/aaa"));
+            FileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
             boolean result = job.waitForCompletion(true);
             System.exit(result?0:1);
         } catch (IOException e) {

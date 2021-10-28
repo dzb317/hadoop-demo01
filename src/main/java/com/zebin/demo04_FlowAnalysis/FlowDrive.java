@@ -23,8 +23,8 @@ public class FlowDrive {
             job.setMapOutputValueClass(FlowBean.class);
             job.setOutputKeyClass(LongWritable.class);
             job.setOutputValueClass(FlowBean.class);
-            FileInputFormat.setInputPaths(job, new Path("src/main/resources/phone_data.txt"));
-            FileOutputFormat.setOutputPath(job, new Path("src/main/resources/aaa"));
+            FileInputFormat.setInputPaths(job, new Path("src/main/file/phone_data.txt"));
+            FileOutputFormat.setOutputPath(job, new Path("src/main/file/aaa"));
             boolean result = job.waitForCompletion(true);
             System.exit(result ? 0 : 1);
         } catch (IOException e) {

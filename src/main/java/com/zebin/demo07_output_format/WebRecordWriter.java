@@ -18,8 +18,8 @@ public class WebRecordWriter extends RecordWriter<Text, NullWritable> {
     public WebRecordWriter(TaskAttemptContext taskAttemptContext) {
         try {
             FileSystem fs = FileSystem.get(taskAttemptContext.getConfiguration());
-            fsOutWebZebin = fs.create(new Path("src/main/resources/aaa/zebin.txt"));
-            fsOutWebOther = fs.create(new Path("src/main/resources/aaa/other.txt"));
+            fsOutWebZebin = fs.create(new Path("src/main/file/aaa/zebin.txt"));
+            fsOutWebOther = fs.create(new Path("src/main/file/aaa/other.txt"));
 
         } catch (IOException e) {
             e.printStackTrace();

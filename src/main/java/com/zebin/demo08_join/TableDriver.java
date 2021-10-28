@@ -30,8 +30,8 @@ public class TableDriver {
             job.setMapOutputValueClass(TableBean.class);
             job.setOutputKeyClass(TableBean.class);
             job.setOutputValueClass(NullWritable.class);
-            FileInputFormat.setInputPaths(job,new Path("src/main/resources/JionFile"));
-            FileOutputFormat.setOutputPath(job,new Path("src/main/resources/aaa"));
+            FileInputFormat.setInputPaths(job,new Path("src/main/file/JionFile"));
+            FileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
             boolean result = job.waitForCompletion(true);
             System.exit(result?0:1);
         } catch (IOException e) {

@@ -37,7 +37,7 @@ public class HadoopDemo01 {
     public static void main(String[] args) throws Exception{
         Configuration conf =new Configuration();
         FileSystem fs = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),conf,"root");
-        FileInputStream input = new FileInputStream("src/main/resources/Sun.txt");
+        FileInputStream input = new FileInputStream("src/main/file/Sun.txt");
         FSDataOutputStream output = fs.create(new Path("/sun.txt"));
         IOUtils.copyBytes(input, output, conf);
         IOUtils.closeStream(input);
