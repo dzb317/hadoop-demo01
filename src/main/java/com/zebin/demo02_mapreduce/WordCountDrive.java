@@ -22,8 +22,8 @@ public class WordCountDrive {
             job.setMapOutputValueClass(IntWritable.class);
             job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(IntWritable.class);
-            FileInputFormat.setInputPaths(job,new Path("src/main/file/Sun.txt"));
-            FileOutputFormat.setOutputPath(job,new Path("src/main/file/aaa"));
+            FileInputFormat.setInputPaths(job,new Path(args[0]));
+            FileOutputFormat.setOutputPath(job,new Path(args[1]));
             boolean result = job.waitForCompletion(true);
             System.exit(result?0:1);
         } catch (IOException e) {

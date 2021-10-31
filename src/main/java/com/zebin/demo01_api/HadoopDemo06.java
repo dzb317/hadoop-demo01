@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class HadoopDemo06 {
     public static void main(String[] args) throws Exception{
         Configuration configuration = new Configuration();
-        FileSystem fs = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),configuration,"root");
-        fs.copyFromLocalFile(new Path("/opt/homebrew/Cellar/mysql"),new Path("/hadoop/"));
+        FileSystem fs = FileSystem.get(new URI("hdfs://121.37.84.67:9000"),configuration,"root");
+        fs.copyFromLocalFile(new Path("/Users/dingzebin/Desktop/Code/Idea-code/hadoop/target/hadoop-1.0-SNAPSHOT.jar"),new Path("/hadoop/"));
         fs.close();
     }
 }

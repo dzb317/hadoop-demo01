@@ -9,7 +9,7 @@ import java.net.URI;
 public class HadoopDemo03 {
     public static void main(String[] args) throws Exception{
         Configuration conf = new Configuration();
-        FileSystem fileSystem = FileSystem.get(new URI("hdfs://121.37.67.252:8020"),conf,"root");
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://121.37.84.67:9000"),conf,"root");
         fileSystem.mkdirs(new Path("/input"));
         fileSystem.close();
     }
